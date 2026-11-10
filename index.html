@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4b241b">
+<title>Sri Varshan & Divya Dharshini | Wedding Invitation</title>
+<style>
+:root{--wine:#6f1721;--gold:#b88a3b;--cream:#fff5df;--ink:#4b2c1d;--green:#455323}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f8edda;color:var(--ink);font-family:Georgia,"Noto Serif Tamil",serif}
+button{font:inherit}
+.hero{min-height:100svh;display:grid;place-items:center;padding:24px 16px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 30%,#fff8e7,#e9c98f 70%,#8a5428)}
+.hero:before,.hero:after{content:"✿";position:absolute;color:#8b672d;font-size:clamp(80px,18vw,180px);opacity:.17}
+.hero:before{top:2%;left:3%}.hero:after{bottom:2%;right:3%}
+.envelope-wrap{width:min(92vw,460px);text-align:center;position:relative;z-index:1}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;color:#775126;font-size:11px}
+.envelope{height:270px;position:relative;margin:26px auto 18px;perspective:900px;cursor:pointer;filter:drop-shadow(0 16px 18px #68401b44)}
+.envelope-back{position:absolute;inset:25px 0 0;background:#7b2527;border:2px solid #d6ad61;border-radius:8px}
+.envelope-front{position:absolute;inset:25px 0 0;background:linear-gradient(145deg,#9b3b32,#6c1723);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:8px}
+.envelope-flap{position:absolute;inset:25px 0 auto;height:58%;background:linear-gradient(145deg,#e7c67f,#b77c35);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform 1s ease;z-index:3}
+.seal{position:absolute;z-index:4;left:50%;top:55%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;display:grid;place-items:center;background:#f4dfaa;color:#8b2927;border:2px solid #9d6a2e;font-size:30px;box-shadow:0 3px 9px #34170c55}
+.envelope.open .envelope-flap{transform:rotateX(180deg)}
+.envelope.open .seal{opacity:0;transition:opacity .3s}
+.invite-paper{position:absolute;z-index:2;left:5%;width:90%;height:220px;top:35px;overflow:hidden;background:#fff3d6;border:1px solid #c99d53;transition:transform 1s ease .25s;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:15px}
+.envelope.open .invite-paper{transform:translateY(-135px)}
+.invite-paper .ganesha{font-size:27px;color:#9b6b28}
+.invite-paper h2{font-size:25px;color:var(--green);margin:5px 0}
+.invite-paper p{font-style:italic;margin:2px}
+.open-btn{border:1px solid #9d6b2c;background:#6f1721;color:#fff4dd;padding:13px 27px;border-radius:30px;letter-spacing:.08em;box-shadow:0 5px 14px #6b351b33}
+.hint{font-size:12px;color:#704c2a;margin-top:12px}
+main{display:none}.site-open main{display:block}
+.section{padding:58px 18px;text-align:center}
+.section-inner{max-width:760px;margin:auto}
+.section h2{font-size:clamp(27px,6vw,42px);color:var(--green);margin:0 0 14px}
+.kicker{letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:#98703b}
+.names{font-size:clamp(28px,7vw,48px);color:var(--wine);line-height:1.18;margin:18px 0}
+.parents{font-size:16px;line-height:1.7;font-style:italic}
+.ornament{color:var(--gold);font-size:23px;margin:16px}
+.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px auto}
+.timebox{background:#fff7e7;border:1px solid #d8b778;border-radius:12px;min-width:70px;padding:13px 10px;box-shadow:0 5px 14px #7a4b1c12}
+.timebox strong{display:block;font-size:25px;color:var(--wine)}.timebox span{font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.event-card{background:linear-gradient(145deg,#fff9ec,#f3dfb7);border:1px solid #c99c55;border-radius:22px;padding:28px 18px;box-shadow:0 12px 30px #6e45151c}
+.event-date{font-size:clamp(24px,6vw,36px);color:var(--wine);font-weight:bold;margin:8px 0}
+.event-time{font-size:19px}
+.venue{font-size:24px;color:var(--wine);font-weight:bold;margin:8px 0}
+.map-link{display:inline-block;margin-top:16px;padding:11px 20px;border-radius:24px;background:var(--green);color:white;text-decoration:none;font-size:14px}
+.gallery{background:#f0dfbd}
+.photos{display:grid;grid-template-columns:1fr;gap:18px;max-width:620px;margin:26px auto 0}
+.photos img{width:100%;max-height:620px;object-fit:cover;border-radius:18px;border:5px solid #fff5df;box-shadow:0 10px 25px #4a291b25}
+.invite-images{display:grid;grid-template-columns:1fr;gap:20px;max-width:560px;margin:25px auto}
+.invite-images img{width:100%;border-radius:12px;box-shadow:0 10px 24px #4a291b22}
+.lang{display:flex;justify-content:center;gap:8px;margin:20px auto}
+.lang button{border:1px solid #a77a3c;background:transparent;color:var(--wine);padding:8px 16px;border-radius:20px}
+.lang button.active{background:var(--wine);color:#fff}
+.tamil{font-family:"Noto Serif Tamil",serif}
+footer{padding:40px 18px;text-align:center;background:#4b241b;color:#fff0d2}
+footer strong{color:#e7c27a}
+@media(min-width:650px){.photos{grid-template-columns:1fr 1fr}.photos img:first-child{grid-column:1/-1;max-height:520px;object-position:center 30%}.invite-images{grid-template-columns:1fr 1fr}.invite-images img{height:100%;object-fit:contain;background:#fff3dd}}
+</style>
+</head>
+<body>
+<section class="hero" id="cover">
+  <div class="envelope-wrap">
+    <div class="eyebrow">With the blessings of our families</div>
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open wedding invitation">
+      <div class="envelope-back"></div>
+      <div class="invite-paper"><div class="ganesha">ॐ</div><div class="eyebrow">You are warmly invited</div><h2>Sri Varshan ♥ Divya</h2><p>November 19, 2026</p><p>Pollachi</p></div>
+      <div class="envelope-flap"></div><div class="envelope-front"></div><div class="seal">♥</div>
+    </div>
+    <button class="open-btn" id="openBtn">OPEN INVITATION</button>
+    <div class="hint">Tap the envelope to open your invitation</div>
+  </div>
+</section>
+<main id="content">
+  <section class="section">
+    <div class="section-inner">
+      <div class="kicker">Somewhere between destiny and forever</div>
+      <div class="ornament">❧ ॐ ❧</div>
+      <h2>The Wedding Ceremony</h2>
+      <p class="tamil" style="line-height:1.9">விதியிற்கும் என்றென்றைக்கும் இடைப்பட்ட ஏதோ ஒரு இடத்தில், இரு ஆன்மாக்கள் தங்களின் வீட்டை ஒருவருக்கொருவர் கண்டறிந்தன.</p>
+      <div class="names">M. Sri Varshan <small style="font-size:.48em">MBA</small><br><span style="font-size:.52em;color:#98703b">&</span><br>K. Divya Dharshini <small style="font-size:.48em">B.Com.</small></div>
+      <div class="parents">S/o Mr. K. Manojkumar & Mrs. M. Selvambikai, Pollachi<br><br>D/o Mr. M. Kandhasamy & Mrs. K. Sathyavani, Udumalpet</div>
+      <div class="ornament">❦ ♥ ❦</div>
+      <div class="lang">
+        <button class="active" id="englishBtn">English</button>
+        <button id="tamilBtn">தமிழ்</button>
+      </div>
+      <p id="languageNote" class="tamil" style="line-height:1.9">அன்புடன் அழைக்கிறோம்! எங்கள் திருமண விழாவில் தாங்கள் குடும்பத்துடன் கலந்து கொண்டு மணமக்களை வாழ்த்துமாறு அன்புடன் கேட்டுக்கொள்கிறோம்.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:10px">
+    <div class="section-inner event-card">
+      <div class="kicker">Save the date</div>
+      <div class="event-date">THURSDAY<br>NOVEMBER 19, 2026</div>
+      <div class="event-time">6:00 PM – 9:00 PM</div>
+      <div class="countdown" id="countdown">
+        <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+        <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+        <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+        <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+      </div>
+      <div class="ornament">✦ ❧ ✦</div>
+      <div class="kicker">Venue</div>
+      <div class="venue">Golden Mahal</div>
+      <div>Palladam Road, Puliyampatti, Pollachi.</div>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Golden+Mahal+Palladam+Road+Puliyampatti+Pollachi" target="_blank" rel="noopener">View venue on Google Maps ↗</a>
+    </div>
+  </section>
+  <section class="section gallery">
+    <div class="section-inner">
+      <div class="kicker">A little glimpse of our moments</div>
+      <h2>Our Togetherness</h2>
+      <div class="photos">
+        <img src="assets/couple-engagement.jpg" alt="Sri Varshan and Divya Dharshini in traditional engagement outfits">
+        <img src="assets/couple-wedding.jpg" alt="Sri Varshan and Divya Dharshini in wedding attire">
+        <img src="assets/couple-portrait.jpg" alt="Sri Varshan and Divya Dharshini together">
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="kicker">The invitation</div>
+      <h2>With love from our families</h2>
+      <div class="invite-images">
+        <img src="assets/invitation-english.jpg" alt="English wedding invitation card">
+        <img src="assets/invitation-tamil.jpg" alt="Tamil wedding invitation card">
+      </div>
+      <div class="ornament">♥</div>
+      <div class="kicker">Little Hearts</div>
+      <p>K. Rishi Kesavan · S. Akshaya<br>M. Lakesh Narasimma · S. Dhanya Sri</p>
+    </div>
+  </section>
+</main>
+<footer><div class="ornament">❦ ♥ ❦</div><strong>M. Sri Varshan & K. Divya Dharshini</strong><p>November 19, 2026 · Pollachi</p><small>We look forward to celebrating with you!</small></footer>
+<script>
+const envelope=document.getElementById('envelope');
+const openBtn=document.getElementById('openBtn');
+function openInvite(){
+  envelope.classList.add('open');
+  setTimeout(()=>{document.body.classList.add('site-open');document.getElementById('content').scrollIntoView({behavior:'smooth'});},850);
+}
+envelope.addEventListener('click',openInvite);
+envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openInvite();}});
+openBtn.addEventListener('click',openInvite);
+const target=new Date('2026-11-19T18:00:00+05:30').getTime();
+function tick(){
+ const diff=target-Date.now();
+ if(diff<=0){document.getElementById('countdown').innerHTML='<strong>Today is the celebration day! ♥</strong>';return;}
+ const vals={days:Math.floor(diff/86400000),hours:Math.floor(diff%86400000/3600000),minutes:Math.floor(diff%3600000/60000),seconds:Math.floor(diff%60000/1000)};
+ Object.entries(vals).forEach(([id,v])=>document.getElementById(id).textContent=String(v).padStart(2,'0'));
+}
+tick();setInterval(tick,1000);
+const englishText="We warmly invite you and your family to join us and bless the couple on their special day.";
+const tamilText="அன்புடன் அழைக்கிறோம்! எங்கள் திருமண விழாவில் தாங்கள் குடும்பத்துடன் கலந்து கொண்டு மணமக்களை வாழ்த்துமாறு அன்புடன் கேட்டுக்கொள்கிறோம்.";
+document.getElementById('englishBtn').onclick=()=>{document.getElementById('languageNote').textContent=englishText;document.getElementById('languageNote').classList.remove('tamil');document.getElementById('englishBtn').classList.add('active');document.getElementById('tamilBtn').classList.remove('active');};
+document.getElementById('tamilBtn').onclick=()=>{document.getElementById('languageNote').textContent=tamilText;document.getElementById('languageNote').classList.add('tamil');document.getElementById('tamilBtn').classList.add('active');document.getElementById('englishBtn').classList.remove('active');};
+</script>
+</body>
+</html>
